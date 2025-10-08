@@ -141,6 +141,7 @@
         packages.artemisrgb-unwrapped = artemisrgb-unwrapped;
         packages.artemisrgb-plugins = artemisrgb-plugins;
         packages.artemisrgb = artemisrgb;
+        packages.default = artemisrgb;
         devShells.default = pkgs.mkShell {
           buildInputs = with pkgs; [
             pkgs.dotnetCorePackages.sdk_9_0
