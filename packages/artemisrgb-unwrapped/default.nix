@@ -32,8 +32,7 @@ buildDotnetModule (finalAttrs: {
   postInstall = ''
     mkdir -p "$out/share/icons"
     ln -s "$out/lib/${finalAttrs.pname}/Icons" "$out/share/icons/hicolor"
-  '';
-  postFixup = ''
+  
     mv $out/bin/Artemis.UI.Linux $out/bin/artemisrgb
   '';
   nativeBuildInputs = [
