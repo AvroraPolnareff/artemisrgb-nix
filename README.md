@@ -19,7 +19,6 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
 ### In nixos
 ```nix
 {
-  
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     artemisrgb.url = "github:AuroraPolnreff/artemisrgb-nix";
@@ -31,7 +30,7 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
       modules = [
         {
           environment.systemPackages = [
-            inputs.artemisrgb
+            inputs.artemisrgb.packages.x86_64-linux.default
           ];
         }
       ];  
@@ -41,7 +40,6 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
 ```
 ## Caveats
 - Some devices plugins seems not to be working (`Artemis.Plugins.Devices.Wooting` as an example)
-- There is no way to install the app without flakes
 - There is no macos build right now
 - It is not possible to customize what plugins should be moved in the final package
 
