@@ -11,6 +11,8 @@ let
 in
 runCommand "artemisrgb-${artemisrgb-unwrapped.version}"
   {
+    inherit (artemisrgb-unwrapped) version meta;
+    pname = "artemisrgb";
     nativeBuildInputs = [ makeWrapper ];
   }
   ''
