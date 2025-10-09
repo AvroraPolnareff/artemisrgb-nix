@@ -24,7 +24,7 @@ buildDotnetModule (finalAttrs: {
   nugetDeps = ./deps.json;
   executables = [ "Artemis.UI.Linux" ];
   patchPhase = ''
-    # for some reason original constant doesn't changes at runtime so we replace it to an env variable
+    # for some reason the original constant doesn't change at runtime so we replace it to an env variable
     substituteInPlace ./src/Artemis.Core/Services/PluginManagementService.cs \
       --replace-fail 'DirectoryInfo builtInPluginDirectory = new(Path.Combine(Constants.ApplicationFolder, "Plugins"));' \
       'DirectoryInfo builtInPluginDirectory = new(Environment.GetEnvironmentVariable("ARTEMISRGB_BUILTIN_PLUGIN_DIR") ?? Path.Combine(Constants.ApplicationFolder, "Plugins"));'
@@ -32,7 +32,7 @@ buildDotnetModule (finalAttrs: {
   postInstall = ''
     mkdir -p "$out/share/icons"
     ln -s "$out/lib/${finalAttrs.pname}/Icons" "$out/share/icons/hicolor"
-  
+
     mv $out/bin/Artemis.UI.Linux $out/bin/artemisrgb
   '';
   nativeBuildInputs = [

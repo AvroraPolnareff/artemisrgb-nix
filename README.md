@@ -12,7 +12,7 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
 
 ## Flake structure
 - The "unwrapped" version of Artemis, without any plugins, in `artemisrgb-unwrapped` derivation
-- All of the builtin plugins in `artemis-plugins` derivation
+- All of the builtin plugins in `artemisrgb-plugins` derivation
 - Plugins and the app together in `artemisrgb` derivation
 
 ## How to install 
@@ -39,9 +39,9 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
 }
 ```
 ## Caveats
-- Some devices plugins seems not to be working (`Artemis.Plugins.Devices.Wooting` as an example)
+- Some device plugins seem not to be working (`Artemis.Plugins.Devices.Wooting` as an example)
 - There is no macos build right now
-- It is not possible to customize what plugins should be moved in the final package
+- It is not possible to customize which plugins should be included in the final package
 
 
 ## Additional Information

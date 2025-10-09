@@ -70,7 +70,7 @@ buildDotnetModule {
   dotnetRestoreFlags = [ "--artifacts-path ./artifacts" ];
   dotnetBuildFlags = [ "--artifacts-path ./artifacts" ];
   patchPhase = ''
-    # for ease of use Artemis.Plugins has a references to local copy of artemis repo
+    # for ease of use Artemis.Plugins has references to a local copy of artemis repo
     # but in order to build these plugins in nix we want to use paths to our unwrapped package in nix store
     substituteInPlace ./src/Directory.Build.props \
       --replace-fail '..\..\..\..\Artemis\src\Artemis.Core\bin\net9.0\Artemis.Core.dll' \
