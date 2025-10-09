@@ -58,7 +58,7 @@ buildDotnetModule {
   inherit dotnet-sdk;
   inherit pluginPaths;
   pname = "artemisrgb-plugins";
-  version = "2.0.0";
+  version = "1.0.0+5d2fe3d";
   src = fetchFromGitHub {
     owner = "Artemis-RGB";
     repo = "Artemis.Plugins";

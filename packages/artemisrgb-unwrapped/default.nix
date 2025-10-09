@@ -13,7 +13,7 @@ in
 buildDotnetModule (finalAttrs: {
   inherit dotnet-sdk;
   pname = "artemisrgb-unwrapped";
-  version = "2.0.0";
+  version = "1.2025.0216.4";
   src = fetchFromGitHub {
     owner = "Artemis-RGB";
     repo = "Artemis";
