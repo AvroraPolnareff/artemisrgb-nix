@@ -21,7 +21,7 @@ Artemis is designed to have minimal impact on gaming performance, ensuring a sea
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    artemisrgb.url = "github:AuroraPolnreff/artemisrgb-nix";
+    artemisrgb.url = "github:AvroraPolnareff/artemisrgb-nix";
   };
 
   outputs = { self, ... }@inputs:
